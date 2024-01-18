@@ -240,3 +240,25 @@ $(function () {
     duration: 800,
   });
 });
+
+
+
+    // Intersection Observer
+    const achieveContainer = document.querySelector('.achieve');
+
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          achieveContainer.classList.add('achieve-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    observer.observe(achieveContainer);

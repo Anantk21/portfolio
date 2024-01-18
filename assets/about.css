@@ -123,7 +123,7 @@ header nav a:hover::before {
 /* Education Container */
 
 .education-container h2{
-  margin-bottom: 30px;
+  margin-bottom: 90px;
   font-size: 50px;
 }
 .education-container {
@@ -195,29 +195,9 @@ header nav a:hover::before {
   
 }
 
-.skills-container {
-  width: 600px;
-  padding: 30px;
-  margin-top: 20px;
-  background-color: #04364A;
-  color: white;
-  border-radius: 15px;
-  box-sizing: border-box;
-  margin-left: 60px;
-}
 
-.skills-container h2 {
-  margin-bottom: 30px;
-  font-size: 50px;
-}
 
-.skill {
-  margin-top: 15px;
-}
 
-.skill h3 {
-  margin-bottom: 5px;
-}
 
 body {
   cursor: grab;
@@ -232,4 +212,104 @@ body {
   pointer-events: none;
   display: block;
   transition-duration: 0.5s; /* Add a value here */
+}
+
+/* skills */
+/* skills */
+/* skills */
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+
+
+.achieve,
+.certificates {
+  flex-basis: 48%;
+  text-align: center; /* Center-align headings */
+}
+
+.heading,
+.certificate-heading {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.grid-container {
+  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-item,
+.certificate-item {
+  width:90%;
+  flex-basis: 100%;
+  margin-bottom: 10px;
+}
+
+.certificate-grid {
+  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.certificate-item img {
+  box-sizing: border-box;
+  border: 12px solid rgb(12, 79, 151);
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+/* skills */
+/* skills */
+/* skills */
+
+ .certificate-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  transition: transform 0.3s ease-in-out;
+}
+
+.certificate-item:hover img {
+  transform: scale(1.2);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.achieve {
+  background-color: #04364A;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  animation: slideIn 1s forwards;
+}
+
+.grid-item {
+  background-color: #3399CC;
+  padding:65px 15px 65px 15px;
+  
+  margin: 10px 100px 10px 5px;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
 }
