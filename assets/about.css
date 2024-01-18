@@ -1,0 +1,235 @@
+* {
+  font-family: sans-serif;
+}
+
+:root {
+  --aqua-color: #97FFF4;
+  --background-color: #04364A;
+}
+
+/* Body and Header */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  
+  background-color: var(--background-color);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 10px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: var(--background-color);
+  z-index: 1000;
+  border-bottom: 2px solid white;
+}
+
+body {
+  margin-top: 90px; /* Add margin-top to body to avoid content being hidden behind the fixed header */
+}
+
+header nav {
+  margin-right: 150px;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+header nav .active {
+  color: var(--aqua-color);
+}
+
+header nav a::before {
+  content: "";
+  width: 0px;
+  height: 2.5px;
+  position: absolute;
+  bottom: -5px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+header nav .active::before {
+  background-color: var(--aqua-color);
+}
+
+header nav a:hover::before {
+  width: 50px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-container {
+  width: 600px;
+  min-height: 400px; /* Set a minimum height for the container */
+  padding: 30px;
+  margin-left: 60px;
+  margin-top: 2vh;
+  background-color: #04364A;
+  color: white;
+  border-radius: 15px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.info-container h2 {
+  margin-bottom: 30px;
+  font-size: 50px;
+}
+
+.passage {
+  margin: 0;
+  font-size: 25px;
+}
+
+.image-container {
+  width: 400px;
+  overflow: hidden;
+  margin-left: 850px; /* Hide any overflow from the image */
+  margin-top: -500px;
+}
+
+.image {
+  width: 100%;
+  height: auto; /* Make the image responsive within its container */
+  border-radius: 15px;
+  display: block; /* Remove any default spacing added by inline elements */
+}
+
+/* Education Container */
+
+.education-container h2{
+  margin-bottom: 30px;
+  font-size: 50px;
+}
+.education-container {
+  background-color: #04364A;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 80px;
+}
+
+.education-item p,h3,h4{
+  margin-left: 50px ;
+  font-weight: 600px;
+}
+
+.education-item {
+  /* font-weight: 200px; */
+  width: 600px;
+  background-color: #3399CC;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+.education-item {
+  position: relative;
+}
+.education-item h4{
+  text-decoration: underline;
+}
+
+.icon-container {
+  position: absolute;
+  margin-top: -15px;
+  left: 10px; /* Adjust the positioning as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #04364A; /* Dark blue background color */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-container i {
+  color: white; /* Set icon color to white */
+}
+
+
+.education-item h3 {
+  margin-bottom: 10px;
+}
+
+.education-image-container {
+  width: 600px; /* Same as the education-container width */
+  overflow: hidden;
+  
+  width: 500px;
+  height: auto;
+  overflow: hidden;
+  margin-left: 850px; /* Hide any overflow from the image */
+  margin-top: -500px; /* Same as the education-container margin-left */
+}
+
+.education-image {
+  width: 100%;
+  height: auto;
+  
+}
+
+.skills-container {
+  width: 600px;
+  padding: 30px;
+  margin-top: 20px;
+  background-color: #04364A;
+  color: white;
+  border-radius: 15px;
+  box-sizing: border-box;
+  margin-left: 60px;
+}
+
+.skills-container h2 {
+  margin-bottom: 30px;
+  font-size: 50px;
+}
+
+.skill {
+  margin-top: 15px;
+}
+
+.skill h3 {
+  margin-bottom: 5px;
+}
+
+body {
+  cursor: grab;
+}
+
+#cursor {
+  height: 30px;
+  width: 30px;
+  background: #97FFF4;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  display: block;
+  transition-duration: 0.5s; /* Add a value here */
+}

@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    color: white;
+    overflow-x: hidden;
+}
+
+.container h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.container {
+    max-width: 1000px;
+    margin: 70px 0 0 20px;
+    padding: 2rem;
+}
+
+.form-control {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 3px solid #4CAF50; /* Increased border size */
+    border-radius: 10px;
+    background-color: #04364a;
+    color: rgb(22, 21, 21);
+    font-size: 1rem;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: background-color 0.3s; /* Added transition for background color */
+}
+textarea :hover,input:hover{
+    background-color: white;
+    
+}
+
+
+
+button {
+    background-color: #23a127;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    width: fit-content;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex; /* Make the button a flex container */
+    align-items: center; /* Align items vertically in the center */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+button img {
+    margin-left: 5px; /* Add margin to separate the image from the text */
+}
+
+button:hover {
+    background-color: white;
+    color: #4CAF50;
+    transform: scale(1.3);
+}
+
+.contact-info {
+    margin: 20px auto; /* Center the element horizontally */
+    width: 50%; /* Set the width of the element */
+}
+
+/* Alternatively, you can use flexbox to center the element both horizontally and vertically */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Set the height of the container to 100% of the viewport height */
+}
+
+
+.contact-info h2 {
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+}
+
+.contact-info a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.mail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.mail i {
+    border-radius: 50%;
+    background-color: green;
+    color: white;
+    padding: 5px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.mail i:hover {
+    background-color: white;
+    color: green;
+}
+
+.mail a {
+    text-decoration: none;
+    color: rgb(252, 248, 248);
+    transition: color 0.3s;
+}
+
+.mail a:hover {
+    color: white;
+}
+
+/* Social Media Buttons */
+.social-buttons {
+    display: flex;
+    margin-top: 20px;
+    grid-gap: 1.5rem;
+    gap: 1.5rem;
+}
+
+
+.social-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    border-radius: 50%; /* Circular shape */
+    width: 40px;
+    height: 40px;
+    margin-right: 5px; /* Adjusted margin */
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+
+
+.social-buttons a i {
+    font-size: 20px;
+}
+
+.social-buttons a:hover {
+    background-color: white; /* Change to white on hover */
+    color: #4CAF50; /* Change text color on hover */
+}
