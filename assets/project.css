@@ -1,0 +1,145 @@
+/* style.css */
+
+* {
+    font-family: sans-serif;
+  }
+  
+  :root {
+    --aqua-color: #97FFF4;
+    --background-color: #04364A;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: var(--background-color);
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 10px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: var(--background-color);
+    z-index: 1000;
+    border-bottom: 2px solid white;
+  }
+  
+  body {
+    margin-top: 90px;
+  }
+  
+  header nav {
+    margin-right: 150px;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  
+  header nav .active {
+    color: var(--aqua-color);
+  }
+  
+  header nav a::before {
+    content: "";
+    width: 0px;
+    height: 2.5px;
+    position: absolute;
+    bottom: -5px;
+    background-color: white;
+    transition: 0.3s;
+  }
+  
+  header nav .active::before {
+    background-color: var(--aqua-color);
+  }
+  
+  header nav a:hover::before {
+    width: 50px;
+  }
+  
+
+  .skills-container {
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-heading {
+    font-size: 65px;
+    margin-bottom: 20px;
+    color: white;
+    width: 100%; /* Ensure heading takes full width */
+}
+
+.skill-box {
+    width: 200px; /* Adjust the size of the square box */
+    height: 200px;
+    background-color: #04364A;
+    border: 4px solid white;
+    box-shadow: 10px 10px 50px white;
+    border-radius: 5px;
+    margin: 10px; /* Adjust the spacing between boxes */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: travelRightToLeft 10s linear infinite; /* Apply animation to .skill-box */
+}
+
+.skill-image img {
+    width: 50%; /* Adjust the size of the image within the box */
+    height: 50%;
+    object-fit: contain; /* Maintain aspect ratio without stretching */
+}
+
+@keyframes travelRightToLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+  body {
+    cursor: grab;
+  }
+  
+  #cursor {
+    height: 30px;
+    width: 30px;
+    background: #97FFF4;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    display: block;
+    transition-duration: 0.5s; /* Add a value here */
+  }
+
+
