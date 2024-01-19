@@ -47,6 +47,10 @@ header nav {
   justify-content: space-between;
   align-items: center;
 }
+header a{
+  color: white;
+  text-decoration: none;
+}
 
 header nav a {
   text-decoration: none;
@@ -234,6 +238,8 @@ body {
 
 .heading,
 .certificate-heading {
+  color: white;
+  margin-top: 20px;
   font-size: 50px;
   font-weight: bold;
   margin-bottom: 15px;
@@ -253,7 +259,7 @@ body {
 }
 
 .certificate-grid {
-  
+  margin-top: 40px;;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
